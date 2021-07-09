@@ -67,9 +67,21 @@ public interface ObjectIndicatorsConfig extends Config
 		return false;
 	}
 
+	@ConfigItem(
+			position = 2,
+			keyName = "fill",
+			name = "Fill",
+			description = "Configures whether or not the model of the object should be filled",
+			section = renderStyleSection
+	)
+	default boolean fill()
+	{
+		return false;
+	}
+
 	@Alpha
 	@ConfigItem(
-		position = 2,
+		position = 3,
 		keyName = "markerColor",
 		name = "Marker color",
 		description = "Configures the color of object marker",
@@ -81,7 +93,7 @@ public interface ObjectIndicatorsConfig extends Config
 	}
 
 	@ConfigItem(
-		position = 3,
+		position = 4,
 		keyName = "borderWidth",
 		name = "Border Width",
 		description = "Width of the marked object border",
@@ -93,7 +105,7 @@ public interface ObjectIndicatorsConfig extends Config
 	}
 
 	@ConfigItem(
-		position = 4,
+		position = 5,
 		keyName = "outlineFeather",
 		name = "Outline feather",
 		description = "Specify between 0-4 how much of the model outline should be faded",
@@ -109,7 +121,7 @@ public interface ObjectIndicatorsConfig extends Config
 	}
 
 	@ConfigItem(
-		position = 5,
+		position = 6,
 		keyName = "rememberObjectColors",
 		name = "Remember color per object",
 		description = "Color objects using the color from time of marking"

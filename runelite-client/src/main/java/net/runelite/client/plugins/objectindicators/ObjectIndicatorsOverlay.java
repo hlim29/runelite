@@ -145,12 +145,20 @@ class ObjectIndicatorsOverlay extends Overlay
 
 		if (polygon != null)
 		{
-			OverlayUtil.renderPolygon(graphics, polygon, color, stroke);
+			if (config.fill()){
+				OverlayUtil.renderFilledPolygon(graphics, polygon, color);
+			} else {
+				OverlayUtil.renderPolygon(graphics, polygon, color);
+			}
 		}
 
 		if (polygon2 != null)
 		{
-			OverlayUtil.renderPolygon(graphics, polygon2, color, stroke);
+			if (config.fill()){
+				OverlayUtil.renderFilledPolygon(graphics, polygon, color);
+			} else {
+				OverlayUtil.renderPolygon(graphics, polygon, color);
+			}
 		}
 	}
 }

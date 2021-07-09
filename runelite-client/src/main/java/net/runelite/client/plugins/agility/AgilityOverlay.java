@@ -181,7 +181,7 @@ class AgilityOverlay extends Overlay
 
 			if (poly != null)
 			{
-				OverlayUtil.renderPolygon(graphics, poly, color);
+				OverlayUtil.renderFilledPolygon(graphics, poly, color);
 			}
 		}
 	}
