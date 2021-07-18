@@ -70,6 +70,16 @@ public interface GroundMarkerConfig extends Config
 	}
 
 	@ConfigItem(
+			keyName = "fill",
+			name = "Fill",
+			description = "Configures whether or not the model of the object should be filled"
+	)
+	default boolean fill()
+	{
+		return false;
+	}
+
+	@ConfigItem(
 		keyName = SHOW_IMPORT_EXPORT_KEY_NAME,
 		name = "Show Import/Export options",
 		description = "Show the Import/Export options on the minimap right-click menu"
